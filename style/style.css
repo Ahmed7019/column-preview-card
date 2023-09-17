@@ -32,7 +32,7 @@ body {
 }
 
 .wrapper {
-  width: 600px;
+  width: 500px;
   display: flex;
   flex-direction: row;
 }
@@ -41,6 +41,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  text-align: left;
 }
 
 .wrapper > :nth-child(1) {
@@ -57,7 +58,6 @@ body {
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  align-content: space-between;
 }
 .content + span {
   display: block;
@@ -71,7 +71,7 @@ p {
 .content :last-child {
   font-size: 20px;
   text-transform: uppercase;
-  padding-top:.5rem ;
+  padding-top: 0.5rem;
 }
 /* Design mobile first */
 
@@ -85,5 +85,9 @@ p {
     padding: 1.5rem;
     flex-direction: column;
     width: fit-content;
+  }
+
+  p {
+    line-break: loose;
   }
 }
