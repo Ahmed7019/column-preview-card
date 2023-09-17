@@ -1,0 +1,45 @@
+/* Colors 
+
+### Primary
+
+*/
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+
+  /* ### Neutral */
+
+  --Transparent-white: hsla(0, 0%, 100%, 0.75); /*(paragraphs)*/
+  --Very-light-gray: hsl(0, 0%, 95%); /*(background, headings, buttons)*/
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  box-sizing: border-box;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.wrapper {
+  width: 600px;
+  display: flex;
+  flex-direction: row;
+}
+
+/* Design mobile first */
+
+@media screen and (max-width:480px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .wrapper > div {
+    padding: 1.5rem;
+    
+  }
+}
