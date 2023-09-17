@@ -18,11 +18,17 @@
   margin: 0;
 }
 
+@font-face {
+  font-family: lexa;
+  src: url(../Fonts/LexendDeca-VariableFont_wght.ttf);
+}
 body {
   box-sizing: border-box;
   display: grid;
   place-items: center;
   min-height: 100vh;
+  font-size: 15px;
+  font-family: "lexa";
 }
 
 .wrapper {
@@ -31,15 +37,53 @@ body {
   flex-direction: row;
 }
 
+.wrapper > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.wrapper > :nth-child(1) {
+  background-color: var(--Bright-orange);
+}
+.wrapper > :nth-child(2) {
+  background-color: var(--Dark-cyan);
+}
+.wrapper > :last-child {
+  background-color: var(--Very-dark-cyan);
+}
+
+.content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+.content + span {
+  display: block;
+}
+
+.content span,
+p {
+  color: white;
+}
+
+.content :last-child {
+  font-size: 20px;
+  text-transform: uppercase;
+  padding-top:.5rem ;
+}
 /* Design mobile first */
 
-@media screen and (max-width:480px) {
+@media screen and (max-width: 480px) {
   .wrapper {
     flex-direction: column;
+    padding: 0 50px;
   }
 
   .wrapper > div {
     padding: 1.5rem;
-    
+    flex-direction: column;
+    width: fit-content;
   }
 }
