@@ -45,6 +45,9 @@ body {
   height: 80rem;
   display: flex;
   flex-direction: column;
+  margin: 4rem 0;
+  border-radius: 0.5rem;
+  overflow: hidden;
 }
 
 .wrapper > div {
@@ -53,7 +56,7 @@ body {
   align-items: flex-start;
   text-align: left;
   width: 100%;
-  height: calc(100%/3);
+  height: calc(100% / 3);
 }
 
 .wrapper > :nth-child(1) {
@@ -68,18 +71,19 @@ body {
 
 /* Change the buttons color */
 
-.wrapper > :nth-child(1) button {
+.wrapper > :nth-child(1) button a {
   color: var(--Bright-orange);
 }
-.wrapper > :nth-child(2) button {
+.wrapper > :nth-child(2) button a {
   color: var(--Dark-cyan);
 }
-.wrapper > :nth-child(3) button {
+.wrapper > :nth-child(3) button a {
   color: var(--Very-dark-cyan);
 }
 
-.content , .about {
-  padding: 1rem;
+.content,
+.about {
+  padding: 2rem;
   display: flex;
   flex-direction: column;
 }
@@ -97,16 +101,18 @@ p {
   color: var(--Transparent-white);
 }
 
-.content :last-child { /* Headings */
+.content :last-child {
+  /* Headings */
   color: var(--Very-light-gray);
   font-size: 25px;
   font-weight: 800;
   text-transform: uppercase;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   font-family: "shoulder-display";
 }
 
 button {
+  position: relative;
   border: none;
   width: 10rem;
   padding: 1rem;
@@ -117,16 +123,39 @@ button {
   background-color: var(--Very-light-gray);
 }
 
-@media (min-width: 480px) { /* laptop design */
+a {
+  text-decoration: none;
+  text-transform: capitalize;
+}
 
+@media (min-width: 900px) {
+  /* laptop design */
 
-  .wrapper > div {
-    padding: 1.5rem;
-    flex-direction: column;
-    width: fit-content;
+  .wrapper {
+    margin: 0;
+    width: 850px;
+    flex-direction: row;
+    height: 32rem;
   }
 
-  p {
-    line-break: loose;
+  .wrapper > div {
+    padding: 0.2rem;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    line-break: auto;
+  }
+
+  button {
+    cursor: pointer;
+    margin-top: 5rem;
+  }
+
+  button:hover { /* Make the transparent color of the button */
+    background-color: transparent;
+    border: 1px solid white;
+  }
+  .wrapper > div button:hover a { /* This to make the color white when hover the button */
+    color: white;
   }
 }
