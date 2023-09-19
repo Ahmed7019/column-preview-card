@@ -58,4 +58,4 @@ As i mentioned above i will continue using the mobile-first workflow as using gr
 ## Author
 
 - Frontend Mentor - [@Ahmed7019](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Twitter - [@tutch7109](https://twitter.com/titch7109)
